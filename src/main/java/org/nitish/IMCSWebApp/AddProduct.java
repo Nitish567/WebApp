@@ -36,7 +36,14 @@ public class AddProduct extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
-		RequestDispatcher rd = request.getRequestDispatcher("/views/home.jsp");
+		String productName = request.getParameter("productName");
+		String productDescription= request.getParameter("productDescription");
+		String price = request.getParameter("price");
+		
+		Product product = new Product(productName, productDescription, price);
+		
+		request.setAttribute("product", product);
+		RequestDispatcher rd = request.getRequestDispatcher("/views/productinfo.jsp");
 		rd.forward(request, response);
 	}
 

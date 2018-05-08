@@ -36,8 +36,17 @@ public class AddOrder extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
-		RequestDispatcher rd = request.getRequestDispatcher("/views/home.jsp");
-		rd.toString();
+		
+		String productName = request.getParameter("productName");
+		String customerName = request.getParameter("customerName");
+		String quantity = request.getParameter("quantity");
+		
+		Order order = new Order(productName, customerName, quantity);
+		
+		request.setAttribute("order", order);
+		
+		RequestDispatcher rd = request.getRequestDispatcher("/views/orderinfo.jsp");
+
 		rd.forward(request, response);
 		
 	}

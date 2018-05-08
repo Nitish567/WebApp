@@ -11,11 +11,11 @@
 	<form action="${pageContext.request.contextPath}/addProduct" method="post">
 		<div>
 			<label for="Product Name">Product Name</label> <input type="text"
-				name="Product Name" id="Product Name" placeholder="Product Name"><br>
+				name="productName" id="Product Name" placeholder="Product Name"><br>
 			<label for="Product Description">Product Description</label> <input
-				type="text" name="Product Description" id="Product Description"
+				type="text" name="productDescription" id="Product Description"
 				placeholder="Product Description"><br> <label
-				for="Price">Price</label> <input type="text" name="Price" id="Price"
+				for="Price">Price</label> <input type="text" name="price" id="Price"
 				placeholder="Price"><br>
 				<input type="submit" value="Save">
 		</div>

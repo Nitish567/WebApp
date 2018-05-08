@@ -19,9 +19,9 @@
 					<option>Ms.</option>
 			</select><br>
 			</label><br> <label id="fn">First Name</label> <input type="text"
-				name="firstname" id="fn" placeholder="First Name" required=""><br>
+				name="firstName" id="fn" placeholder="First Name" required=""><br>
 
-			<label id="ln">Last Name</label> <input type="text" name="lastname"
+			<label id="ln">Last Name</label> <input type="text" name="lastName"
 				id="ln" placeholder="Last Name" required=""><br> <label
 				id="sx">Suffix</label> <input type="text" name="suffix" id="sx"
 				placeholder="Suffix"><br> <label id="email">E-Mail</label>
@@ -30,7 +30,7 @@
 				id="cmpny">Company</label> <input type="text" name="Company"
 				id="cmpny" placeholder="Company"><br> <label
 				id="display">Display Name</label> <input type="text"
-				name="displayNae" id="display" placeholder="Display Name"><br>
+				name="displayName" id="display" placeholder="Display Name"><br>
 
 			<label id="check">Print on Check</label> <input type="text"
 				name="checkName" id="check" placeholder="Print on Check" required=""><br>
@@ -104,7 +104,7 @@
 				id="sCity">Shipping City</label> <input type="text"
 				name="shippingCity" id="sCity" placeholder="Shipping City"
 				required=""><br> <label> Shipping State <select
-				name="state">
+				name="shippingState">
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
 					<option value="AZ">Arizona</option>

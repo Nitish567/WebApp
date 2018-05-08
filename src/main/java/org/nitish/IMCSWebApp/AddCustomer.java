@@ -36,7 +36,24 @@ public class AddCustomer extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
-		RequestDispatcher rd = request.getRequestDispatcher("/views/home.jsp");
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String email = request.getParameter("email");
+
+		Customer customer = new Customer(firstName, lastName, email);
+		String address = request.getParameter("billingStreet");
+		String city = request.getParameter("city");
+		String state = request.getParameter("state");
+		String country = request.getParameter("country");
+		String zipCode = request.getParameter("billingZip");
+		Address billingAddress = new Address(address, city, state, country, zipCode);
+		customer.setAddress(billingAddress);
+		System.out.println(customer);
+		request.setAttribute("customer", customer);
+		
+		System.out.println(request.getAttribute("customer"));
+		
+		RequestDispatcher rd = request.getRequestDispatcher("/views/customerinfo.jsp");
 		rd.forward(request, response);
 	}
 
